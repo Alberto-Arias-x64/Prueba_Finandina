@@ -1,0 +1,63 @@
+:root {
+    --principal_gradient_90: linear-gradient(90deg, #048FF7, #07FAF2);
+    --principal_gradient_45: linear-gradient(-45deg, #048FF7, #07FAF2);
+}
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    overflow:hidden;
+}
+/*//////////Components Styles//////////*/
+body{
+    font-family: 'Open Sans', sans-serif;
+    color: #707070;
+}
+
+/*//////////Public Classes//////////*/
+.standard_padding{
+    padding: 12px 10vw;
+}
+.title{
+    font-size: 18px;
+}
+.card{
+
+}
+
+/*//////////Top//////////*/
+#top_layout{
+    width: 100vw;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    justify-items: center;
+    align-items: center;
+
+    background-image: var(--principal_gradient_90);
+}
+#top_layout_center{
+    display: grid;
+    grid-template-rows: repeat(2, auto);
+
+    justify-items: center;
+    align-items: center;
+}
+#top_message{
+    display: flex;
+
+    text-align: center;
+    font-size: 22px;
+    font-weight: 700;
+
+    color: white;
+}
+#top_name{
+    font-style: italic;
+}
+
+/*//////////Principal//////////*/
+#principal_layout{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
