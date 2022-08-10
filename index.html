@@ -8,7 +8,7 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;1,700&display=swap"
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,500;0,600;0,700;1,700&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 
@@ -19,31 +19,129 @@
     <main>
         <section id="top_layout" class="standard_padding">
             <div>
-                <img src="./assets/Logo.svg" alt="">
+                <img src="./assets/Top/Logo.svg" alt="">
             </div>
             <div id="top_layout_center">
                 <picture>
-                    <img src="./assets/Congrats.svg" alt="">
+                    <img src="./assets/Top/Congrats.svg" alt="">
                 </picture>
                 <div id="top_message">
-
-                    <p>
-                    <p id="top_name">Carolina,</p>la firma digital de tu producto ha sido exitosa</p>
+                    <span id="top_name">Carolina,</span>
+                    <span>la firma digital de tu producto ha sido exitosa</span>
                 </div>
             </div>
             <div>
                 <picture>
-                    <img src="./assets/Phone_Blue.svg" alt="">
+                    <img src="./assets/Top/Phone_Blue.svg" alt="">
                 </picture>
             </div>
         </section>
         <section id="principal_layout" class="standard_padding">
-            <div>
-                <p class="title">Estas son las condiciones del producto digital que acabas de firmar</p>
-            </div>
-            <div></div>
+            <section>
+                <div>
+                    <span class="title">Estas son las condiciones del producto digital que acabas de firmar</span>
+                    <img class="icon" src="./assets/Chevron.svg" alt="">
+                </div>
+                <section id="cards_layout">
+                    <div class="card">
+                        <div class="card_icon">
+                            <picture>
+                                <img src="./assets/Cards/Wallet.svg" alt="">
+                            </picture>
+                        </div>
+                        <p class="decorator">Tipo</p>
+                        <p class="bold">Crédito de Libre Inversión</p>
+                    </div>
+                    <div class="card">
+                        <div class="card_icon">
+                            <picture>
+                                <img src="./assets/Cards/Dolar.svg" alt="">
+                            </picture>
+                        </div>
+                        <p class="decorator">Monto</p>
+                        <p class="bold">$40,000,000</p>
+                    </div>
+                    <div class="card">
+                        <div class="card_icon">
+                            <picture>
+                                <img src="./assets/Cards/Timer.svg" alt="">
+                            </picture>
+                        </div>
+                        <p class="decorator">Plazo en Meses</p>
+                        <p class="bold">60</p>
+                    </div>
+                </section>
+                <section id="badges">
+                    <div>
+                        <p class="decorator">Tasa nmv</p>
+                        <p class="bold">1,79 %</p>
+                    </div>
+                    <div>
+                        <p class="decorator">Tipo</p>
+                        <p class="bold">Fija</p>
+                    </div>
+                    <div>
+                        <p class="decorator">Valor Seguro de vida</p>
+                        <p class="bold">$59,525</p>
+                    </div>
+                    <div>
+                        <p class="decorator">ID radicación</p>
+                        <p class="bold">1459525</p>
+                    </div>
+                </section>
+                <div>
+                    <span class="title">La cuenta a la que te enviaremos el dinero es*</span>
+                    <img class="icon" src="./assets/Chevron.svg" alt="">
+                </div>
+                <section id="provicional">
+                    <picture>
+                        <img src="./assets/Credit_Card.svg" alt="">
+                    </picture>
+                    <div>
+                        <p>Bancolombia Cuenta de Ahorros</p>
+                        <p class="bold">N° 1111111111111111</p>
+                    </div>
+                </section>
+                <p class="disclaimer">*Recuerda que debes ser el titular de la cuenta, de lo contrario tu desembolso
+                    presentará rechazo.</p>
+            </section>
+            <section>
+                <div>
+                    <span class="title">¿Qué viene ahora?</span>
+                    <img class="icon" src="./assets/Chevron.svg" alt="">
+                </div>
+                <section id="information">
+                    <div id="decorators">
+                        <picture>
+                            <img src="./assets/Decorators/Decorator.svg" alt="">
+                        </picture>
+                        <picture>
+                            <img src="./assets/Decorators/Group_Decorator.svg" alt="">
+                        </picture>
+                    </div>
+                    <div id="information_text">
+                        <p>En 24 horas:</p>
+                        <p>Verificaremos la información que nos suministraste.</p>
+                        <p>Una vez aprobado realizaremos el desembolso de tu dinero.</p>
+                        <p>Recibirás a tu correo electrónico la confirmación del proceso y una copia de los documentos
+                            que acabas de firmar.</p>
+                    </div>
+                </section>
+                <p>Si tienes dudas sobre el proceso que acabas de realizar:</p>
+                <div id="whatsapp">
+                    <picture>
+                        <img src="" alt="">
+                    </picture>
+                    <div>
+                        <span>Escríbenos dando clic </span>
+                        <span class="bold">aquí</span>
+                    </div>
+                </div>
+                <button>FINALIZAR</button>
+            </section>
         </section>
     </main>
+
 </body>
 
 </html>
