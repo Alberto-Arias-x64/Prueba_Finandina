@@ -10,29 +10,30 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,500;0,600;0,700;1,700&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
-
+    <link rel="stylesheet" href="./styles.css" />
+    <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
     <title>Banco Finandina</title>
 </head>
 
 <body>
     <main>
-        <section id="top_layout">
-            <div class="f_bottom">
-                <img src="./assets/Top/Check.svg" alt="">
-                <img id="logo" src="./assets/Top/Logo.svg" alt="">
-            </div>
-            <div id="top_layout_center">
-
-                <img src="./assets/Top/Congrats.svg" alt="">
-
-                <div id="top_message">
-                    <span id="top_name">Carolina,</span>
-                    <span>la firma digital de tu producto ha sido exitosa</span>
+        <section id="top">
+            <div id="top_layout">
+                <div class="f_bottom">
+                    <img src="./assets/Top/Check.svg" alt="">
+                    <img id="logo" src="./assets/Top/Logo.svg" alt="">
                 </div>
-            </div>
-            <div class="f_bottom">
-                <img src="./assets/Top/Phone_Blue.svg" alt="">
+                <div id="top_layout_center">
+                    <img id="logo_mobile" src="./assets/Top/Logo.svg" alt="">
+                    <img id="congrats" src="./assets/Top/Congrats.svg" alt="">
+                    <div id="top_message">
+                        <span id="top_name">Alberto,</span>
+                        <span>la firma digital de tu producto ha sido exitosa</span>
+                    </div>
+                </div>
+                <div class="f_bottom">
+                    <img src="./assets/Top/Phone_Blue.svg" alt="">
+                </div>
             </div>
         </section>
 
@@ -49,8 +50,10 @@
                                 <img src="./assets/Cards/Wallet.svg" alt="">
                             </picture>
                         </div>
-                        <p class="decorator">Tipo</p>
-                        <p class="bold">Crédito de Libre Inversión</p>
+                        <div>
+                            <p class="decorator">Tipo</p>
+                            <p class="bold">Crédito de Libre Inversión</p>
+                        </div>
                     </div>
                     <div class="card">
                         <div class="card_icon">
@@ -58,8 +61,10 @@
                                 <img src="./assets/Cards/Dolar.svg" alt="">
                             </picture>
                         </div>
-                        <p class="decorator">Monto</p>
-                        <p class="bold">$40,000,000</p>
+                        <div>
+                            <p class="decorator">Monto</p>
+                            <p class="bold">$40,000,000</p>
+                        </div>
                     </div>
                     <div class="card">
                         <div class="card_icon">
@@ -67,8 +72,10 @@
                                 <img src="./assets/Cards/Timer.svg" alt="">
                             </picture>
                         </div>
-                        <p class="decorator">Plazo en Meses</p>
-                        <p class="bold">60</p>
+                        <div>
+                            <p class="decorator">Plazo en Meses</p>
+                            <p class="bold">60</p>
+                        </div>
                     </div>
                 </section>
                 <section id="badges">
@@ -144,11 +151,11 @@
                         <span class="bold">aquí</span>
                     </div>
                 </div>
-                <button>FINALIZAR</button>
+                <button onclick="Change()">CAMBIAR A TARJETA</button>
             </section>
         </section>
     </main>
-
+    <script src="./main.js"></script>
 </body>
 
 </html>

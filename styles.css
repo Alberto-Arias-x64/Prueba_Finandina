@@ -21,7 +21,7 @@ body{
     color: #707070;
 }
 button{
-    width: 350px;
+    width: 100%;
     height: 50px;
 
     margin: 0 auto;
@@ -69,24 +69,32 @@ button::after{
     font-weight: 700;
 }
 .f_bottom{
-    height: 100%;
-    display: flex;
-    align-items: flex-end;
-
-    position: relative;
+    display: none;
+}
+.hide{
+    display: none;
 }
 
 /*//////////Top//////////*/
-#top_layout{
+#top{
     width: 100vw;
-    height: 260px;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    background-image: var(--principal_gradient_90);
+}
+#top_layout{
+    width: fit-content;
+    height: 200px;
+    margin: 0 auto;
+    margin-top: 50px;
+    margin-bottom: 10px;
+    padding: 0 30px;
+
+    display: flex;
 
     justify-items: center;
     align-items: center;
 
-    background-image: var(--principal_gradient_90);
+    overflow: initial;
+    
 }
 #top_layout_center{
     display: grid;
@@ -94,6 +102,13 @@ button::after{
 
     justify-items: center;
     align-items: center;
+
+    position: relative;
+
+    overflow: initial;
+}
+#congrats{
+    width: 80%;
 }
 #top_message{
     text-align: center;
@@ -113,29 +128,47 @@ button::after{
 
     z-index: 2;
 }
+#logo_mobile{
+    width: 100px;
+    position: absolute;
+
+    top: -40px;
+    left: 0;
+
+    z-index: 2;
+}
 
 /*//////////Principal//////////*/
 #principal_layout{
     width: fit-content;
     margin: 20px auto;
+    padding: 30px;
 
     display: grid;
-    grid-template-columns: 480px 540px;
+    grid-template-columns: auto;
+    grid-auto-rows: auto;
 
-    gap: 90px;
+    gap: 50px;
 }
+
+/*//////////Badges//////////*/
 #badges{
     display: flex;
     flex-direction: row;
 
+    flex-wrap: wrap;
+    align-items: center;
+
     text-align: center;
     white-space: nowrap;
+
+    gap: 8px;
 }
 #badges > *{
     margin: 0 auto;
 }
 
-/*//////////Column one//////////*/
+/*//////////Columns//////////*/
 #column_one, #column_two{
     display: grid;
     grid-auto-rows: auto;
@@ -145,23 +178,28 @@ button::after{
 /*//////////Cards//////////*/
 #cards_layout{
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: auto;
+    overflow: initial;
 }
 .card{
-    width: 140px;
+    width: 95%;
     margin: 8px;
     padding: 16px 8px;
     
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
 
-    align-items: center;
-    text-align: center;
-    gap: 5px;
+    gap: 8px;
 
     border-radius: 14px;
 
     box-shadow: 0 5px 10px 0 #00000041;
+}
+.card  .decorator{
+    max-width: max-content;
+    border: none;
+
+    text-align: left;
 }
 .card_icon{
     height: 52px;
@@ -210,12 +248,9 @@ button::after{
 }
 #information_text{
     display: grid;
-    grid-auto-rows: 42px;
+    grid-auto-rows: minmax(42px fit-content);
 
     gap: 11px;
-
-    align-items: center;
-    overflow: hidden;
 }
 
 /*//////////Information//////////*/
@@ -228,4 +263,63 @@ button::after{
     margin-left: 6px;
     padding-left: 10px;
     border-left: 4px solid var(--principal_color) ;
+}
+
+
+
+@media screen and (min-width: 570px) /*Tablet*/ {
+    button{
+        width: 350px;
+    }
+    .decorator{
+        margin: 0 auto;
+        text-align: center !important;
+        border-bottom: 2px solid var(--principal_color) !important;
+    }
+    #top_layout{
+        height: 260px;
+        margin-top: 40px;
+        margin-bottom: 0;
+    }
+    #logo_mobile{
+        width: 110px;
+    }
+    #principal_layout{
+        grid-template-columns: 540px;
+    }
+    #cards_layout{
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .card{
+        width: 140px;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 5px;
+    }
+    #information_text{
+        grid-auto-rows: 42px;
+        align-items: center;
+        overflow: hidden;
+    }
+}
+
+@media screen and (min-width: 1130px) /*Desk Top*/ {
+    .f_bottom{
+        height: 100%;
+        display: flex;
+        align-items: flex-end;
+        position: relative;
+    }
+    #top_layout{
+        display: grid;
+        grid-template-columns: repeat(3, 385px);
+    }
+    #logo_mobile{
+        display: none;
+    }
+    #principal_layout{
+        grid-template-columns: 480px 540px;
+        gap: 90px;
+    }
 }
