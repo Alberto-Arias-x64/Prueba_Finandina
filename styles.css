@@ -37,6 +37,10 @@ button{
 
     position: relative;
 }
+button:hover{
+    cursor: pointer;
+    background-color: #ed2528a6;
+}
 button::after{
     content: url('./assets/Check_Button.svg');
     position: absolute;
@@ -59,6 +63,7 @@ button::after{
 .decorator{
     min-width: 48px;
     max-width: fit-content;
+
     text-align: center;
     border-bottom: 2px solid var(--principal_color);
 }
@@ -147,8 +152,8 @@ button::after{
 /*//////////Principal//////////*/
 #principal_layout{
     width: fit-content;
-    margin: 20px auto;
-    padding: 30px;
+    margin: 10px auto;
+    padding: 20px;
 
     display: grid;
     grid-template-columns: auto;
@@ -170,8 +175,37 @@ button::after{
 
     gap: 8px;
 }
+.badge{
+    display: flex;
+    flex-direction: row;
+
+    align-items: flex-start;
+
+    text-align: center;
+    white-space: nowrap;
+
+    gap: 14px;
+}
+#badges_extended{
+    display: flex;
+    flex-wrap: wrap;
+
+    align-items: center;
+    justify-content: center;
+    grid-auto-flow: column;
+
+    text-align: center;
+    white-space: nowrap;
+
+    gap: 30px;
+}
 #badges > *{
     margin: 0 auto;
+}
+#badges_extended > div > *{
+    width: 140px;
+    max-width: none;
+    margin: 0;
 }
 
 /*//////////Columns//////////*/
@@ -264,8 +298,6 @@ button::after{
     display: grid;
     grid-auto-rows: minmax(42px fit-content);
 
-    text-align: justify;
-
     gap: 11px;
 }
 
@@ -282,7 +314,6 @@ button::after{
 }
 
 
-
 @media screen and (min-width: 570px) /*Tablet*/ {
     button{
         width: 350px;
@@ -291,6 +322,9 @@ button::after{
         margin: 0 auto;
         text-align: center !important;
         border-bottom: 2px solid var(--principal_color) !important;
+
+        margin-bottom: 5px;
+        padding-bottom: 8px;
     }
     #top_layout{
         height: 260px;
@@ -311,6 +345,11 @@ button::after{
         flex-direction: column;
         align-items: center;
         text-align: center;
+        gap: 5px;
+    }
+    .standard_gap{
+        display: flex;
+        flex-direction: column;
         gap: 5px;
     }
     #information_text{
