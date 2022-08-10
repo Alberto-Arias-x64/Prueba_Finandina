@@ -13,6 +13,7 @@
     font-family: HelveticaNeue;
     src: url('./assets/Font_Family/HelveticaNeueMedium.ttf');
 }
+
 /*//////////Components Styles//////////*/
 body{
     font-family: 'Open Sans', sans-serif;
@@ -23,6 +24,8 @@ button{
     width: 350px;
     height: 50px;
 
+    margin: 0 auto;
+
     border: none;
     border-radius: 25px;
 
@@ -31,12 +34,16 @@ button{
     font-size: 16px;
     font-weight: 600;
     color: white;
+
+    position: relative;
+}
+button::after{
+    content: url('./assets/Check_Button.svg');
+    position: absolute;
+    right: 30px ;
 }
 
 /*//////////Public Classes//////////*/
-.standard_padding{
-    padding: 0 10vw;
-}
 .title{
     font-family: HelveticaNeue;
     font-size: 18px;
@@ -56,13 +63,23 @@ button{
     border-bottom: 2px solid var(--principal_color);
 }
 .disclaimer{
-    font-size: 10px;
+    display: flex;
+
+    font-size: 11px;
     font-weight: 700;
+}
+.f_bottom{
+    height: 100%;
+    display: flex;
+    align-items: flex-end;
+
+    position: relative;
 }
 
 /*//////////Top//////////*/
 #top_layout{
     width: 100vw;
+    height: 260px;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
 
@@ -88,13 +105,22 @@ button{
 #top_name{
     font-style: italic;
 }
+#logo{
+    position: absolute;
+
+    top: 12px;
+    left: 0;
+
+    z-index: 2;
+}
 
 /*//////////Principal//////////*/
 #principal_layout{
-    margin-top: 20px;
+    width: fit-content;
+    margin: 20px auto;
 
     display: grid;
-    grid-template-columns: 500px auto;
+    grid-template-columns: 480px 540px;
 
     gap: 90px;
 }
@@ -109,15 +135,21 @@ button{
     margin: 0 auto;
 }
 
+/*//////////Column one//////////*/
+#column_one, #column_two{
+    display: grid;
+    grid-auto-rows: auto;
+    gap: 20px;
+}
+
 /*//////////Cards//////////*/
 #cards_layout{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 16px;
 }
 .card{
     width: 140px;
-    margin: 16px;
+    margin: 8px;
     padding: 16px 8px;
     
     display: flex;
@@ -147,12 +179,12 @@ button{
     align-items: center;
 }
 
-/*//////////provicional//////////*/
-#provicional{
+/*//////////Banc account data//////////*/
+#banc_account_data{
     display: grid;
-    grid-template-columns: min-content 220px;
+    grid-template-columns: min-content 250px;
 
-    gap: 14px;
+    gap: 13px;
 
     text-align: right;
 }
@@ -160,15 +192,40 @@ button{
 /*//////////Information//////////*/
 #information{
     display: flex;
-    flex-direction: row;
-}
-#decorators{
-    display: flex;
     flex-direction: column;
+
+    gap: 16px;
+}
+#information_top{
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+    align-items: center;
+}
+#information_bottom{
+    display: grid;
+    grid-template-columns: max-content auto;
 
     gap: 16px;
 }
 #information_text{
     display: grid;
-    grid-template-rows: auto;
+    grid-auto-rows: 42px;
+
+    gap: 11px;
+
+    align-items: center;
+    overflow: hidden;
+}
+
+/*//////////Information//////////*/
+#whatsapp{
+    display: grid;
+    grid-template-columns: min-content 140px;
+}
+#whatsapp_decorator{
+    height: fit-content;
+    margin-left: 6px;
+    padding-left: 10px;
+    border-left: 4px solid var(--principal_color) ;
 }
