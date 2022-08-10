@@ -32,7 +32,7 @@
                     </div>
                 </div>
                 <div class="f_bottom">
-                    <img src="./assets/Top/Phone_Blue.svg" alt="">
+                    <img id="phone_img" src="./assets/Top/Phone_Blue.svg" alt="">
                 </div>
             </div>
         </section>
@@ -44,7 +44,8 @@
                     <img class="icon" src="./assets/Chevron.svg" alt="">
                 </div>
                 <section id="cards_layout">
-                    <div class="card">
+
+                    <div class="card team_blue">
                         <div class="card_icon">
                             <picture>
                                 <img src="./assets/Cards/Wallet.svg" alt="">
@@ -55,7 +56,7 @@
                             <p class="bold">Crédito de Libre Inversión</p>
                         </div>
                     </div>
-                    <div class="card">
+                    <div class="card team_blue">
                         <div class="card_icon">
                             <picture>
                                 <img src="./assets/Cards/Dolar.svg" alt="">
@@ -66,7 +67,7 @@
                             <p class="bold">$40,000,000</p>
                         </div>
                     </div>
-                    <div class="card">
+                    <div class="card team_blue">
                         <div class="card_icon">
                             <picture>
                                 <img src="./assets/Cards/Timer.svg" alt="">
@@ -77,6 +78,41 @@
                             <p class="bold">60</p>
                         </div>
                     </div>
+
+                    <div class="card team_red hide">
+                        <div class="card_icon">
+                            <picture>
+                                <img src="./assets/Cards/Credit_Cards.svg" alt="">
+                            </picture>
+                        </div>
+                        <div>
+                            <p class="decorator">Tarjeta</p>
+                            <p class="bold">Tarjeta de Crédito</p>
+                        </div>
+                    </div>
+                    <div class="card team_red hide">
+                        <div class="card_icon">
+                            <picture>
+                                <img src="./assets/Cards/Visa.svg" alt="">
+                            </picture>
+                        </div>
+                        <div>
+                            <p class="decorator">Tarjeta</p>
+                            <p class="bold">Visa Oro</p>
+                        </div>
+                    </div>
+                    <div class="card team_red hide">
+                        <div class="card_icon">
+                            <picture>
+                                <img src="./assets/Cards/Dolar.svg" alt="">
+                            </picture>
+                        </div>
+                        <div>
+                            <p class="decorator">Cupo</p>
+                            <p class="bold">$2,200,000</p>
+                        </div>
+                    </div>
+
                 </section>
                 <section id="badges">
                     <div>
@@ -96,20 +132,29 @@
                         <p class="bold">1459525</p>
                     </div>
                 </section>
-                <div>
+                <div class="team_blue">
                     <span class="title">La cuenta a la que te enviaremos el dinero es*</span>
                     <img class="icon" src="./assets/Chevron.svg" alt="">
                 </div>
-                <section id="banc_account_data">
-
-                    <img src="./assets/Credit_Card.svg" alt="">
-
+                <div class="team_red hide">
+                    <span class="title">Compra de cartera</span>
+                    <img class="icon" src="./assets/Chevron.svg" alt="">
+                </div>
+                <section id="banc_account_data" class="team_blue">
+                    <img src="./assets/Badges/Credit_Card.svg" alt="">
                     <div>
                         <p>Bancolombia Cuenta de Ahorros</p>
                         <p class="bold">N° 1111111111111111</p>
                     </div>
                 </section>
-                <div class="disclaimer">
+                <section id="banc_account_data_cat" class="team_red hide">
+                    <img src="./assets/Badges/Cat.svg" alt="">
+                    <div class="f_row">
+                        <span>Número de tarjeta:</span>
+                        <span class="bold"> 4456782341567131</span>
+                    </div>
+                </section>
+                <div class="disclaimer team_blue">
                     <p>*</p>
                     <p>Recuerda que debes ser el titular de la cuenta, de lo contrario tu desembolso
                         presentará rechazo.</p>
@@ -123,15 +168,11 @@
                 </div>
                 <section id="information">
                     <div id="information_top">
-
                         <img src="./assets/Decorators/Decorator.svg" alt="">
-
                         <p class="bold">En 24 horas:</p>
                     </div>
                     <div id="information_bottom">
-
                         <img src="./assets/Decorators/Group_Decorator.svg" alt="">
-
                         <div id="information_text">
                             <p>Verificaremos la información que nos suministraste.</p>
                             <p>Una vez aprobado realizaremos el desembolso de tu dinero.</p>
@@ -143,9 +184,7 @@
                 </section>
                 <p>Si tienes dudas sobre el proceso que acabas de realizar:</p>
                 <div id="whatsapp">
-
                     <img src="./assets/WA_Icon.svg" alt="">
-
                     <div id="whatsapp_decorator">
                         <span>Escríbenos dando clic </span>
                         <span class="bold">aquí</span>

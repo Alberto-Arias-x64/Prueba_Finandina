@@ -68,11 +68,17 @@ button::after{
     font-size: 11px;
     font-weight: 700;
 }
+.f_row{
+    display: flex;
+    flex-direction: row;
+
+    gap: 10px;
+}
 .f_bottom{
     display: none;
 }
 .hide{
-    display: none;
+    display: none !important;
 }
 
 /*//////////Top//////////*/
@@ -226,6 +232,14 @@ button::after{
 
     text-align: right;
 }
+#banc_account_data_cat{
+    display: grid;
+    grid-template-columns: min-content auto;
+
+    gap: 13px;
+
+    text-align: right;
+}
 
 /*//////////Information//////////*/
 #information{
@@ -249,6 +263,8 @@ button::after{
 #information_text{
     display: grid;
     grid-auto-rows: minmax(42px fit-content);
+
+    text-align: justify;
 
     gap: 11px;
 }
@@ -314,6 +330,7 @@ button::after{
     #top_layout{
         display: grid;
         grid-template-columns: repeat(3, 385px);
+        margin-top: 0;
     }
     #logo_mobile{
         display: none;
