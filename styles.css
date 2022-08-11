@@ -39,7 +39,7 @@ button{
 }
 button:hover{
     cursor: pointer;
-    background-color: #ed2528a6;
+    background-color: #aa1618;
 }
 button::after{
     content: url('./assets/Check_Button.svg');
@@ -311,6 +311,9 @@ button::after{
     margin-left: 6px;
     padding-left: 10px;
     border-left: 4px solid var(--principal_color) ;
+}
+#whatsapp > *:hover{
+    cursor: pointer;
 }
 
 
